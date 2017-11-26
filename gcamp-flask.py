@@ -30,7 +30,7 @@ def get_goods_default():
         'title': title,
         'describe': describe,
         'link_map': ast.literal_eval(link_map),
-        'image_map': ast.literal_eval(image_map),
+        'image_map': ast.literal_eval(image_map.replace('https', 'http')),
         'answer_id': answer_id,
         'upvote': upvote
     } for (item_id, title, describe, link_map, image_map, answer_id, upvote) in values]}
